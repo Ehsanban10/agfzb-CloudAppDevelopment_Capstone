@@ -15,9 +15,24 @@
 
     <body>
     <!-- Remove this line the first time you edit this file -->
-     This is the index page of your Django app!
-    <!--Add a nav bar here -->
+    <nav>    
+        <form method="post" action="{% url 'signout_view' %}">
+            <input type="submit" value="Sign Out">
+        </form>
+        <h1>Login</h1>
+        <form method="post" action="{% url '' %}">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <input type="submit" value="Login">
+        </form>
 
+        <!-- Add a link to the registration page here -->
+        <p>Don't have an account? <a href="{% url 'registration_view' %}">Sign up</a></p>
+    </nav>
     <!--Add a dealer table here -->
 
     </body>
